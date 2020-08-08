@@ -24,6 +24,9 @@ from data import create_dataset
 from models import create_model
 from util.visualizer import Visualizer
 
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = '1'
+
 if __name__ == '__main__':
     opt = TrainOptions().parse()   # get training options
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
